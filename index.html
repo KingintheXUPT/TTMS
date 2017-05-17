@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>frame</title>
+    <link rel="stylesheet" href="css/main_frame.css">
+    <link rel="stylesheet" href="css/cssSign.css">
+    <link rel="stylesheet" href="css/tabText.css">
+    <link rel="stylesheet" href="css/mangerPeople.css">
+</head>
+<body>
+<div id="hideDiv">
+</div>
+<div class="divSign">
+    <div class="divSignTitle">
+        <div class="divSignTitleFloat">
+            <h1 style="float: left">登陆</h1>
+        </div>
+    </div>
+    <hr class="hrSign"/>
+    <div class="divZZ">
+        <form id="Login" class="formSign" action="/login">
+            <div class="divInput"><span class="spanInput">账号</span>
+                <input id="userName" type="text" class="input1"
+                       name="userName"
+                       placeholder="工作号？手机号"/></div>
+            <br/>
+            <div class="divInput"><span class="spanInput">密码</span>
+                <input id="passWord" name="passWord" type="password" class="input1"
+                       placeholder="请输入密码"/></div>
+        </form>
+    </div>
+    <div class="divDown">
+        <div class="divJZ">
+            <input type="checkbox"/>记住我
+            &nbsp;
+            <a href="#" style="color: red"> 忘记密码?</a>
+        </div>
+        <div class="divDL">
+            <button id="btnLogin" type="button" class="btn1 btnSign" value="Login" onclick="checkUser()">登陆</button>
+        </div>
+    </div>
+
+
+</div>
+<div id="addPersonDiv" class="addPersonDiv">
+    <div class="divSignTitle">
+        <div class="divAddTitleFloat">
+            <h1 style="float: left">添加新用户</h1>
+        </div>
+    </div>
+    <hr class="hrAddPerson"/>
+    <div class="divZZ">
+        <form id="addPersonForm" class="addPersonForm" action="/login">
+            <label>姓名</label><br/>
+            <input type="text" id="addUserNameInput"/><br/>
+            <label>密码</label><br/>
+            <input type="text" id="addPassWordInput"/><br/>
+            <label>确认密码</label><br/>
+            <input type="text" id="conformPassWordInput"/><br/>
+            <label>职位</label><br/>
+            <input type="text" id="addJobInput"/><br/>
+            <label>性别</label><br/>
+            <input type="text" id="addSexInput"/><br/>
+            <label>薪资</label><br/>
+            <input type="text" id="addMoneyInput"/><br/>
+        </form>
+    </div>
+    <!--<div class="divDownAdd">-->
+
+        <div class="divDLAdd">
+            <button id="addPersonConformBtn" type="button" class="addPersonConformBtn" value="Login"
+                    onclick="addUserConform()">确认
+            </button>
+        </div>
+    <!--</div>-->
+</div>
+
+
+<div id="Main_div" class="Main_div">
+    <div id="Title_div" class="Title_div">
+        <div class="logDiv"></div>
+        <div class="navDiv"><b style="font-size: 40px">原谅她</b>剧院票务管理系统</div>
+        <div class="personDiv">登陆</div>
+        <div class="personDivSign">
+
+        </div>
+    </div>
+    <div id="leftDiv" class="leftDiv">
+        <div id="li1" class="leftChild active"><a class="tab-control" href="#tab-2"></a>售票系统</div>
+        <div id="li2" class="leftChild"><a class="tab-control" href="#tab-2"></a>剧院管理</div>
+        <div id="li3" class="leftChild"><a class="tab-control" href="#tab-3"></a>剧目管理</div>
+        <div id="li4" class="leftChild"><a class="tab-control" href="#tab-4"></a>剧场管理</div>
+        <div id="li5" class="leftChild"><a class="tab-control" href="#tab-5"></a>人员管理</div>
+    </div>
+    <div id="divBody" class="divBody">
+        <div class="tab-panel active" id="tab-1">我</div>
+        <div class="tab-panel" id="tab-2">日</div>
+        <div class="tab-panel" id="tab-3">你</div>
+        <div class="tab-panel" id="tab-4">妈</div>
+        <div class="tab-panel" id="tab-5">
+            <div id="personTableNav" class="personTableNav">
+                <button id="addPersonBtn" class="btnPersonChange" type="button">增加</button>
+                <button id="deletePersonBtn" class="btnPersonChange" type="button">删除</button>
+                <button class="btnPersonChange" type="button">修改</button>
+
+            </div>
+            <div id="personTableBody" class="personTableBody">
+                <div class="deleteNav">
+                    <button class="btnPersonDelete" type="button" onclick="deleteUser()">确认删除</button>
+                </div>
+                <div class="ulDiv">
+                    <form id=formCheck>
+                        <table id="userTable" class="userTable" width="400">
+                            <tr>
+                                <th></th>
+                                <th>工作号</th>
+                                <th>姓名</th>
+                                <th>职位</th>
+                                <th>性别</th>
+                                <th>薪资</th>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
+            </div>
+            <div id="personMissionDiv" class="personMissionDiv">
+                <div class="personPicture">
+                    <img src="img/bf1.jpg">
+                </div>
+                <div class="personMissionLi">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/main_frame.js"></script>
+<script type="text/javascript" src="js/Manager.js"></script>
+
+</body>
+</html>
